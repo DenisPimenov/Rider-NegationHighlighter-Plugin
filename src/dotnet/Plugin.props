@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <SdkVersion>2020.1.0</SdkVersion>
+
+    <Title>NegationHighlighter</Title>
+    <Description>Unary negation highlighter for people like me, who sometimes don't see operand.</Description>
+
+    <Authors>Denis Pimenov</Authors>
+    <Copyright>Copyright $([System.DateTime]::Now.Year) Maintainers of NegationHighlighter</Copyright>
+    <PackageTags>editor highlighting</PackageTags>
+
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageIconUrl></PackageIconUrl>
+  </PropertyGroup>
+</Project>
