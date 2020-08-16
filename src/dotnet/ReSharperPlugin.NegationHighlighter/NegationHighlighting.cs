@@ -2,19 +2,17 @@ using JetBrains.DocumentModel;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi.CSharp;
 using JetBrains.ReSharper.Psi.Tree;
-using ReSharperPlugin.NegationHighlighter;
-
-[assembly: RegisterConfigurableSeverity(
-    NegationHighlighting.SeverityId,
-    CompoundItemName: null,
-    Group: HighlightingGroupIds.CodeInfo,
-    Title: NegationHighlighting.Message,
-    Description: NegationHighlighting.Description,
-    DefaultSeverity: Severity.HINT)
-]
 
 namespace ReSharperPlugin.NegationHighlighter
 {
+    [RegisterConfigurableSeverity(
+        NegationHighlighting.SeverityId,
+        CompoundItemName: null,
+        Group: HighlightingGroupIds.CodeInfo,
+        Title: NegationHighlighting.Message,
+        Description: NegationHighlighting.Description,
+        DefaultSeverity: Severity.HINT)
+    ]
     [ConfigurableSeverityHighlighting(
         SeverityId,
         CSharpLanguage.Name,
@@ -25,7 +23,7 @@ namespace ReSharperPlugin.NegationHighlighter
         public const string SeverityId = nameof(NegationHighlighting);
         public const string Message = "Unary Negation";
         public const string Description = "Unary Negation";
-        
+
         public NegationHighlighting(ITreeNode declaration)
         {
             Declaration = declaration;

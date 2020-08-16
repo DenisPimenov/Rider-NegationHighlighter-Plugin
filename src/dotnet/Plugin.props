@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <SdkVersion>2020.1.0</SdkVersion>
+    <SdkVersion>2020.2.0-eap08</SdkVersion>
 
     <Title>NegationHighlighter</Title>
     <Description>Unary negation highlighter for people like me, who sometimes don't see operand.</Description>
@@ -9,8 +9,8 @@
     <Copyright>Copyright $([System.DateTime]::Now.Year) Maintainers of NegationHighlighter</Copyright>
     <PackageTags>editor highlighting</PackageTags>
 
-    <PackageProjectUrl></PackageProjectUrl>
-    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/DenisPimenov/Rider-NegationHighlighter-Plugin</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/DenisPimenov/Rider-NegationHighlighter-Plugin/blob/master/LICENSE</PackageLicenseUrl>
     <PackageIconUrl></PackageIconUrl>
   </PropertyGroup>
 </Project>

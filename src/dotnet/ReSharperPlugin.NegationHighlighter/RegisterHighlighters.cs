@@ -1,22 +1,7 @@
-﻿using System.Drawing;
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
 using JetBrains.Application;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.TextControl.DocumentMarkup;
-using ReSharperPlugin.NegationHighlighter;
-
-[assembly: RegisterHighlighter(
-    NegationHighlighterAttributeIds.UnaryNot,
-    GroupId = NegationHighlighterAttributeIds.GroupId,
-    BackgroundColor = "Orange",
-    DarkBackgroundColor = "Orange",
-    ForegroundColor = "Red",
-    FontStyle = FontStyle.Bold,
-    Layer = HighlighterLayer.SYNTAX)]
-
-[assembly: RegisterHighlighterGroup(
-    NegationHighlighterAttributeIds.GroupId, "Negation Highlighter", HighlighterGroupPriority.COMMON_SETTINGS,
-    RiderNamesProviderType = typeof(NotHighlighterSettingsNamesProvider))]
 
 namespace ReSharperPlugin.NegationHighlighter
 {

@@ -2,14 +2,14 @@
   <id>negationhighlighter-rider</id>
   <name>NegationHighlighter</name>
   <version>_PLACEHOLDER_</version>
-  <vendor url="https://project-url">Author</vendor>
+  <vendor url="https://github.com/DenisPimenov/Rider-NegationHighlighter-Plugin">Denis Pimenov</vendor>
   <idea-version since-build="_PLACEHOLDER_" until-build="_PLACEHOLDER_" />
   <depends>com.intellij.modules.rider</depends>
 
   <description>
 <![CDATA[
-<p>Sample description</p>
+<p>Unary negation highlighter for people like me, who sometimes don't see operand</p>
 ]]>
   </description>
-  
+  -mld1Bm0aw0_i8TDpO7u
 </idea-plugin>
