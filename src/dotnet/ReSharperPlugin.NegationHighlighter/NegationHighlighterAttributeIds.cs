@@ -11,7 +11,9 @@ namespace ReSharperPlugin.NegationHighlighter
         DarkBackgroundColor = "Orange",
         ForegroundColor = "Red",
         FontStyle = FontStyle.Bold,
-        Layer = HighlighterLayer.SYNTAX)]
+        EffectType = EffectType.SOLID_UNDERLINE,
+        EffectColor = "Red",
+        Layer = HighlighterLayer.CARET_ROW)]
 
     [RegisterHighlighterGroup(
         GroupId, "Negation Highlighter", HighlighterGroupPriority.COMMON_SETTINGS,
