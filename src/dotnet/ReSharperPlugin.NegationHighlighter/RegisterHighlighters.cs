@@ -1,5 +1,4 @@
-﻿using JetBrains.Annotations;
-using JetBrains.Application;
+﻿using JetBrains.Application;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.TextControl.DocumentMarkup;
 
@@ -16,13 +15,13 @@ namespace ReSharperPlugin.NegationHighlighter
     [ShellComponent]
     public class ConfigurableSeverityHacks
     {
-        [NotNull] private static readonly Severity[] Severities =
+        private static readonly Severity[] Severities =
         {
             Severity.HINT,
             Severity.WARNING
         };
 
-        [NotNull] private static readonly string[] HighlightingIds =
+        private static readonly string[] HighlightingIds =
         {
             NegationHighlighterAttributeIds.UnaryNot,
         };
