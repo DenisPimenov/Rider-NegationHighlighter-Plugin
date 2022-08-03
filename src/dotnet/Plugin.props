@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <SdkVersion>2022.1.1</SdkVersion>
+    <SdkVersion>2022.2.0</SdkVersion>
 
     <Title>NegationHighlighter</Title>
     <Description>Unary negation highlighter for people like me, who sometimes don't see operand.</Description>
