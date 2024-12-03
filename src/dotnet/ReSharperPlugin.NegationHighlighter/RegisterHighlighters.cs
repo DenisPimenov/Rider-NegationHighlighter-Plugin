@@ -1,49 +1,28 @@
-﻿using JetBrains.Application;
+﻿using System.Collections.Generic;
+using JetBrains.Application;
+using JetBrains.Application.Parts;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.TextControl.DocumentMarkup;
 
 namespace ReSharperPlugin.NegationHighlighter
 {
-    public class NotHighlighterSettingsNamesProvider : PrefixBasedSettingsNamesProvider
+    public class NotHighlighterSettingsNamesProvider()
+        : PrefixBasedSettingsNamesProvider(NegationHighlighterAttributeIds.GroupId,
+           "Negation_Highlighter");
+
+    [ShellComponent(Instantiation.DemandAnyThreadSafe)]
+    public sealed class NotHighlighterSeverityPresentationsProvider : IHighlightingCustomPresentationsForSeverityProvider
     {
-        public NotHighlighterSettingsNamesProvider()
-            : base(NegationHighlighterAttributeIds.GroupId, NegationHighlighterAttributeIds.GroupId)
+        public IEnumerable<string> GetAttributeIdsForSeverity(Severity severity)
         {
-        }
-    }
-
-    [ShellComponent]
-    public class ConfigurableSeverityHacks
-    {
-        private static readonly Severity[] Severities =
-        {
-            Severity.HINT,
-            Severity.WARNING
-        };
-
-        private static readonly string[] HighlightingIds =
-        {
-            NegationHighlighterAttributeIds.UnaryNot,
-        };
-
-        public ConfigurableSeverityHacks()
-        {
-            var severityIds = HighlightingAttributeIds.ValidHighlightingsForSeverity;
-            lock (severityIds)
+            if (severity is Severity.HINT or Severity.WARNING or Severity.SUGGESTION)
             {
-                foreach (var severity in Severities)
-                {
-                    if (!severityIds.TryGetValue(severity, out var collection)) continue;
-
-                    foreach (var highlightingId in HighlightingIds)
-                    {
-                        if (!collection.Contains(highlightingId))
-                        {
-                            collection.Add(highlightingId);
-                        }
-                    }
-                }
+                return [
+                    NegationHighlighterAttributeIds.UnaryNot,
+                ];
             }
+
+            return [];
         }
     }
 }

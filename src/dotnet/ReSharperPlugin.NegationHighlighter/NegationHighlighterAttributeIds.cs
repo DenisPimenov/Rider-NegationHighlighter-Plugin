@@ -12,16 +12,14 @@ namespace ReSharperPlugin.NegationHighlighter
         ForegroundColor = "Red",
         FontStyle = FontStyle.Bold,
         EffectType = EffectType.SOLID_UNDERLINE,
-        EffectColor = "Red",
-        Layer = HighlighterLayer.CARET_ROW)]
+        Layer = HighlighterLayer.ADDITIONAL_SYNTAX)]
 
     [RegisterHighlighterGroup(
         GroupId, "Negation Highlighter", HighlighterGroupPriority.COMMON_SETTINGS,
         RiderNamesProviderType = typeof(NotHighlighterSettingsNamesProvider))]
     public static class NegationHighlighterAttributeIds
     {
-        public const string UnaryNot = "Unary Negation Highlighter !";
-
         public const string GroupId = "Unary Negation Highlighter";
+        public const string UnaryNot = "Unary Negation Highlighter !";
     }
 }
